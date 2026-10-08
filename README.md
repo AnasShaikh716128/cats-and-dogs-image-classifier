@@ -1,107 +1,67 @@
 # Cats and Dogs Image Classifier
 
-This project contains a Jupyter Notebook that builds and trains a Convolutional Neural Network (CNN) to classify images of cats and dogs.
+A deep learning image classification project built with TensorFlow and Keras. The model is trained to classify images into three categories: **cats, dogs, and other animals**.
 
-## Overview
+This project was completed as part of the **freeCodeCamp Machine Learning with Python** curriculum.
 
-The notebook demonstrates:
+## Project Overview
 
-- Loading and exploring the dataset
-- Preparing image data using `ImageDataGenerator`
-- Augmenting images to improve generalization
-- Building a CNN model with TensorFlow/Keras
-- Training and validating the model
-- Plotting training metrics
-- Evaluating model accuracy against a challenge dataset
+The model uses a Convolutional Neural Network (CNN) to learn visual patterns from images and predict which category an image belongs to.
 
-## Project Files
+### Classes
 
-- `cats_and_dogs.ipynb` — main training and evaluation notebook
-- `README.md` — project documentation
+- cat
+- dog
+- others
 
-## Requirements
+## Technologies Used
 
-To run the notebook, install the following Python packages:
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Matplotlib
 
-```bash
-pip install tensorflow matplotlib scipy pandas notebook
-```
+## Model
 
-Recommended:
+The project uses a TensorFlow/Keras image classification model with image preprocessing and data augmentation.
 
-- Python 3.10+
-- TensorFlow 2.x
-- Jupyter Notebook or JupyterLab
+The final model achieved **72% accuracy** on the freeCodeCamp challenge and successfully passed the certification test.
 
-## Dataset
-
-The notebook expects a dataset named:
+## Project Structure
 
 ```text
-cats_and_dogs.zip
+cats-and-dogs/
+├── cats_and_dogs.ipynb
+├── requirements.txt
+└── README.md
 ```
 
-After extraction, it uses a folder structure like this:
+## How to Run
 
-```text
-cats_and_dogs/
-├── train/
-│   ├── cats/
-│   └── dogs/
-├── validation/
-│   ├── cats/
-│   └── dogs/
-├── test/
-```
-
-The dataset is processed using Keras `flow_from_directory`, which reads images directly from the folder structure.
-
-## Notebook Workflow
-
-The notebook performs the following steps:
-
-1. Extract the dataset zip file.
-2. Define image paths and dataset directories.
-3. Create training, validation, and test generators.
-4. Resize images to `150x150`.
-5. Apply rescaling and augmentation.
-6. Build a CNN model with convolutional and pooling layers.
-7. Compile the model with binary cross-entropy loss.
-8. Train the model for 15 epochs.
-9. Visualize accuracy and loss trends.
-10. Evaluate the model on test images and compare predictions to expected answers.
-
-## Model Architecture
-
-The CNN includes:
-
-- `Conv2D` layers
-- `MaxPooling2D` layers
-- `Flatten`
-- `Dense` layers
-- `Dropout` (included in the imported layers, although not heavily used in the final model)
-- Final sigmoid output for binary classification
-
-## Run the Notebook
-
-Open the notebook in Jupyter:
+1. Clone this repository.
+2. Install the required libraries:
 
 ```bash
-jupyter notebook cats_and_dogs.ipynb
+pip install -r requirements.txt
 ```
 
-Then run all cells sequentially.
+3. Open the Jupyter Notebook:
 
-## Notes
+```bash
+jupyter notebook
+```
 
-- The notebook prints the model's classification accuracy percentage.
-- It checks whether the model passes a challenge threshold of 63% correct predictions.
-- The project is intended as a beginner-friendly deep learning example for image classification.
+4. Open the project notebook and run the cells.
+
+## Result
+
+The trained model successfully completed the freeCodeCamp **Cats and Dogs Image Classifier** challenge with an accuracy of **72%**.
+
+## Course
+
+This project is based on the Machine Learning with Python curriculum by freeCodeCamp.
 
 ## License
 
-This project does not include a specific license file in the provided notebook context. If this is being used publicly, you may want to add an appropriate license such as MIT or Apache 2.0.
-
-## Author
-
-Built as a TensorFlow/Keras image classification project for identifying cats and dogs from image data.
+This project is for educational and learning purposes.
